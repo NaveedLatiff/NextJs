@@ -2,8 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <h1>I am Contact Page</h1>
+    <div className='h-[200vh] bg-black text-white '>
+      <h1 className='pt-[120px]'>I am Contact Page</h1>
     </div>
   )
 }
