@@ -11,9 +11,9 @@ const page = () => {
             <p ><Link href='about/seo'>SEO</Link></p>
 
             <p className='mx-auto mt-[120vh]'>Testing Scroll</p>
-            <Script id="my-script" strategy="beforeInteractive">
+            {/* <Script id="my-script" strategy="beforeInteractive">
                 {`console.log("Hello World!")`}
-            </Script>
+            </Script> */}
 
 
         </div>
