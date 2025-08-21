@@ -5,7 +5,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='flex justify-end fixed text-white '> 
+    <div className='flex justify-end fixed text-white bg-red-400 w-screen pr-[30px]'> 
     <ul className='flex gap-3.5 pr-3.5 '>
         <Link href='/' ><li>Home</li></Link>
         {/* replace={true} */}
