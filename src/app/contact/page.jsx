@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Navbar from '../Components/Navbar'
 
 
 
@@ -10,6 +11,7 @@ export const metadata = {
 const page = () => {
   return (
     <div className='h-[200vh] bg-black text-white '>
+        <Navbar/>
       <h1 className='pt-[120px]'>I am Contact Page</h1>
         <Image
         src="/img.jpeg"  
