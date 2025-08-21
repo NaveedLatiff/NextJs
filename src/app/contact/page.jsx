@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 
+
+
+export const metadata = {
+  title:"CONTACT"
+}
+
 const page = () => {
   return (
     <div className='h-[200vh] bg-black text-white '>

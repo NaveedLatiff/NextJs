@@ -1,5 +1,10 @@
 import React from 'react'
 
+
+export const metadata = {
+  title:"FILES "
+}  
+
 const page = async ({params}) => {
     let {file}=await params
     // console.log(await params.file)
