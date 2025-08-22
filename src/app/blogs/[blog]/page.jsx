@@ -16,7 +16,7 @@ import React from 'react'
 //    - Build time par HTML generate hoti hai
 //    - Har request par wahi pre-built HTML milti hai
 
-// 4. ISR / DSG (Incremental Static Regeneration / Dynamic SSG)
+// 4. ISR (Incremental Static Regeneration )
 //    - Pehle static (SSG) jaisa serve hota hai
 //    - Lekin background me page re-generate bhi hota hai
 
@@ -37,6 +37,10 @@ export  function generateStaticParams(){
        {blog:'3'} 
     ]
 }
+
+// This is Incremental Static Regeneration
+//statically rendered  page har 5 second baad regenerate hoga
+export const revalidate = 5   
 
 
 
@@ -65,10 +69,12 @@ const page = async ({ params }) => {
   if (blogId > 5) {
     notFound();
   }
+  
     return (
-        <div className='min-h-screen bg-black text-white '>
+        <div className='min-h-screen bg-black text-white  text-center'>
             <Navbar/>
         <h1 className='pt-6'>Blog {blogId}</h1>
+        <p className='pt-6 text-amber-400'>{new Date().toLocaleString()}</p>
         </div>
     )
 }
