@@ -43,6 +43,39 @@ export  function generateStaticParams(){
 export const revalidate = 5   
 
 
+// Next.js Dynamic Rendering Modes:
+
+// 1. dynamic = "auto" (default)
+//      Next.js khud decide karega page ko statically serve kare ya SSR kare
+//      Agar data fetching static ho sakti hai  > StaticSideGeneration
+//      Agar fetch per request hai (cookies, headers, no cache)  > SSR
+
+// 2. dynamic = "force static"
+//      Hamesha statically generate karega (StaticSideGeneration)
+//      Chahe tum fetch SSR waala karo, Next.js ignore karega aur static banayega
+//      Best for performance
+
+// 3. dynamic = "force dynamic"
+//      Hamesha dynamically render hoga (SSR)
+//      Kabhi cache nahi hoga
+//      Har request par server par fresh HTML generate hogi
+
+// 4. dynamic = "error"
+//      Agar page static nahi ban sakta toh error throw karega
+//      Yeh ensure karta hai ke page hamesha static hi ho
+
+// Now the page will be rendered statically at first (SSG).
+// But because of revalidate = 5, the page will be re-generated in the background
+// every 5 seconds (ISR - Incremental Static Regeneration).
+
+// export const dynamic = "force-static"
+
+// It will not rendered page dynamcially bcz we use use revalidate which will rendered page statically  bcz ,
+//  Nextjs revalidate ko priority deta hai we have to remove revalidate if we want to rendered page dynamically 
+
+// export const dynamic='force-dynamic'
+
+
 
 export async function generateMetadata({params}){
     let {blog}=await params
