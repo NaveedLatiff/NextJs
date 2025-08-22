@@ -1,6 +1,7 @@
+import Likes from '@/app/Components/Likes';
 import Navbar from '@/app/Components/Navbar';
 import { notFound } from 'next/navigation';
-import React from 'react'
+import React, { Suspense } from 'react'
 
 // Rendering & Generation Types (4 main concepts)
 
@@ -107,6 +108,10 @@ const page = async ({ params }) => {
         <div className='min-h-screen bg-black text-white  text-center'>
             <Navbar/>
         <h1 className='pt-6'>Blog {blogId}</h1>
+        {/*Example of  Streaming In NextJs */}
+        <Suspense fallback={<h1 className='mt-7'>Loading Likes...</h1>}>
+        <Likes/>
+        </Suspense>
         <p className='pt-6 text-amber-400'>{new Date().toLocaleString()}</p>
         </div>
     )
