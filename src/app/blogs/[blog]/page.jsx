@@ -22,6 +22,11 @@ import React from 'react'
 
 
 
+// Now this page will only work for statically generated routes (from generateStaticParams).
+// Any other dynamic route will show 404 Not Found because dynamicParams = false
+export const  dynamicParams=false
+
+
 // We can convert a dynamically rendered page into a statically rendered page  example given below //
 export  function generateStaticParams(){
     return[
@@ -34,9 +39,10 @@ export  function generateStaticParams(){
 }
 
 
+
 export async function generateMetadata({params}){
     let {blog}=await params
-    if(blog > 3 || !/^\d+$/.test(blog)){
+    if(blog > 5 || !/^\d+$/.test(blog)){
         return {
             title:{
                 absolute:"NOT FOUND"
@@ -56,7 +62,7 @@ const page = async ({ params }) => {
     notFound();
   }
   const blogId = parseInt(blog);
-  if (blogId > 3) {
+  if (blogId > 5) {
     notFound();
   }
     return (
