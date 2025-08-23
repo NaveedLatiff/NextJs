@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Script from 'next/script'
 import React from 'react'
+import API from '../Components/API'
 
 const page = () => {
     return (
@@ -9,12 +10,13 @@ const page = () => {
             <p className='text-center mt-[20px]'>My Services</p>
             <p><Link href='about/webdev'>Web Development</Link></p>
             <p ><Link href='about/seo'>SEO</Link></p>
+            <p className='text-green-700 mt-[20px]'>API CALLING BELOW</p>
+            <API />
 
             <p className='mx-auto mt-[120vh]'>Testing Scroll</p>
             {/* <Script id="my-script" strategy="beforeInteractive">
                 {`console.log("Hello World!")`}
             </Script> */}
-
 
         </div>
     )
