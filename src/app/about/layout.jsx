@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function AboutLayout({ children }) {
   return (
-     <div className="min-h-screen bg-gray-900 text-white">
+     <div className="min-h-screen ">
           <Navbar/> 
       {children}
     </div>

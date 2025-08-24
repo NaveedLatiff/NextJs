@@ -3,9 +3,10 @@ import API from '../Components/API'
 import Navbar from '../Components/Navbar'
 
 const page = async () => {
-    // let res = await fetch("https://httpbin.org/delay/1")
+    // It will take 19 seconds to load the page better way to do it is parallel API calls
+    // let res = await fetch("https://httpbin.org/delay/10")
     // let data = await res.json()
-    // let res2 = await fetch("https://httpbin.org/delay/2")
+    // let res2 = await fetch("https://httpbin.org/delay/9")
     // let data2 = await res2.json()
 
     
@@ -22,7 +23,7 @@ const page = async () => {
     return (
         <>
             <Navbar />
-            <div className='min-h-screen bg-black text-white'>
+            <div className='min-h-screen '>
                 <p>{JSON.stringify(data1)}</p>
                 <p>{JSON.stringify(data2)}</p>
             

@@ -13,7 +13,7 @@ const API = async () => {
     let data=await res.json()
     return (
         <div >
-            <p className="text-white">TITLE FROM API IS : {data.title}</p>
+            <p >TITLE FROM API IS : {data.title}</p>
         </div>
 )
 }

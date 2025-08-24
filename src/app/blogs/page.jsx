@@ -10,7 +10,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className='h-[200vh] bg-black text-white '>
+    <div className='h-[200vh]'>
         <Navbar/>
       <h1 className='pt-[120px]'>I am Blog Page</h1>
       <Link href='/blogs/1'><p>Blog 1</p></Link>

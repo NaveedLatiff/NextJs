@@ -28,7 +28,7 @@ const Hydration = () => {
     return (
         <>
             <p className='mt-5 text-red-700'>Hydration Example</p>
-            <h1 className='text-white'>The Random Number is {num}</h1>
+            <h1 className=''>The Random Number is {num}</h1>
         </>
 
     )

@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
     <Navbar/>
-    <div className='h-[200vh] bg-black text-white pt-[120px]'>
+    <div className='h-[200vh]  pt-[120px]'>
     <Hydration/>
     <br />
     <br />

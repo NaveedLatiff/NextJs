@@ -11,9 +11,9 @@ const page = async ({params}) => {
     // console.log(await params.file)
   return (
 
-   <div className='bg-black text-center min-h-screen '>
+   <div className='text-center min-h-screen '>
     <Navbar/>
-        <h1 className='text-white pt-[50px]'>file/{file?.join("/")}</h1>
+        <h1 className=' pt-[50px]'>file/{file?.join("/")}</h1>
     </div>
    )
 }

@@ -24,7 +24,7 @@ const page = async () => {
 
 
   return (
-    <div className='h-[200vh] bg-black text-white '>
+    <div className='h-[200vh] '>
       <Navbar />
       <h1 className='pt-[120px]'>I am Contact Page</h1>
       <Image

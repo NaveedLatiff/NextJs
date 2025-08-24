@@ -105,7 +105,7 @@ const page = async ({ params }) => {
   }
   
     return (
-        <div className='min-h-screen bg-black text-white  text-center'>
+        <div className='min-h-screen  text-center'>
             <Navbar/>
         <h1 className='pt-6'>Blog {blogId}</h1>
         {/*Example of  Streaming In NextJs */}
